@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Paso 2 de 3: Captura de fotos" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:background="@color/verde_claro" android:padding="12dp"
+            android:text="Requisitos: fotos Frontal, Trasera y Detalle/Etiqueta, con buena iluminación." />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:orientation="horizontal" android:weightSum="2">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_margin="4dp" android:orientation="vertical">
+                <ImageView android:id="@+id/casillaFrontal" android:layout_width="match_parent"
+                    android:layout_height="140dp" android:background="@color/superficie_secundaria"
+                    android:src="@android:drawable/ic_menu_camera" android:scaleType="center"
+                    android:contentDescription="Foto frontal" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center" android:text="Frontal" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_margin="4dp" android:orientation="vertical">
+                <ImageView android:id="@+id/casillaTrasera" android:layout_width="match_parent"
+                    android:layout_height="140dp" android:background="@color/superficie_secundaria"
+                    android:src="@android:drawable/ic_menu_camera" android:scaleType="center"
+                    android:contentDescription="Foto trasera" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center" android:text="Trasera" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:weightSum="2">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_margin="4dp" android:orientation="vertical">
+                <ImageView android:id="@+id/casillaDetalle" android:layout_width="match_parent"
+                    android:layout_height="140dp" android:background="@color/superficie_secundaria"
+                    android:src="@android:drawable/ic_menu_camera" android:scaleType="center"
+                    android:contentDescription="Foto de detalle o etiqueta" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center" android:text="Detalle / Etiqueta" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_margin="4dp" android:orientation="vertical">
+                <ImageView android:id="@+id/casillaExtra" android:layout_width="match_parent"
+                    android:layout_height="140dp" android:background="@color/superficie_secundaria"
+                    android:src="@android:drawable/ic_menu_add" android:scaleType="center"
+                    android:contentDescription="Foto extra opcional" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center" android:text="+ Extra (opcional)" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button android:id="@+id/botonAnalizar" android:layout_width="match_parent"
+            android:layout_height="56dp" android:layout_marginTop="24dp" android:text="Analizar con IA" />
+    </LinearLayout>
+</ScrollView>

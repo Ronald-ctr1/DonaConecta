@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Paso 3 de 3: Análisis IA" android:textStyle="bold" />
+
+        <ProgressBar android:id="@+id/indicadorProgreso" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_gravity="center"
+            android:layout_marginTop="24dp" />
+
+        <TextView android:id="@+id/textoCalidad" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            android:textSize="28sp" android:textStyle="bold" android:visibility="gone" />
+
+        <LinearLayout android:id="@+id/tarjetaRechazo" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            android:background="@color/rojo_claro" android:orientation="vertical"
+            android:padding="16dp" android:visibility="gone">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Fotografía rechazada" android:textColor="@color/rojo" android:textStyle="bold" />
+            <TextView android:id="@+id/textoMotivos" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <Button android:id="@+id/botonRetomar" style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginTop="16dp" android:text="Volver a tomar las fotografías"
+            android:visibility="gone" />
+        <!-- Bloqueado por defecto: solo se habilita si la IA aprueba -->
+        <Button android:id="@+id/botonContinuar" android:layout_width="match_parent"
+            android:layout_height="56dp" android:layout_marginTop="8dp"
+            android:enabled="false" android:text="Continuar y publicar" />
+    </LinearLayout>
+</ScrollView>

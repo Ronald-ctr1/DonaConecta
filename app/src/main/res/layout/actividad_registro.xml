@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Crear cuenta" android:textSize="26sp" android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout style="@style/Campo" android:hint="Nombre completo">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/campoNombre"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout style="@style/Campo" android:hint="Correo electrónico">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/campoCorreo"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout style="@style/Campo" android:hint="Contraseña (mín. 6)"
+            app:endIconMode="password_toggle">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/campoClave"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout style="@style/Campo" android:hint="Confirmar contraseña"
+            app:endIconMode="password_toggle">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/campoConfirmarClave"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:text="Tipo de cuenta" android:textStyle="bold" />
+        <RadioGroup android:id="@+id/grupoRol" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+            <RadioButton android:id="@+id/rolDonante" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:checked="true" android:text="Donante individual" />
+            <RadioButton android:id="@+id/rolEmpresa" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Empresa / Comercio" />
+            <RadioButton android:id="@+id/rolFundacion" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Fundación / Organización" />
+        </RadioGroup>
+
+        <CheckBox android:id="@+id/casillaTerminos" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Acepto la política de privacidad y condiciones" />
+
+        <ProgressBar android:id="@+id/indicadorProgreso" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_gravity="center" android:visibility="gone" />
+        <Button android:id="@+id/botonCrearCuenta" android:layout_width="match_parent"
+            android:layout_height="56dp" android:layout_marginTop="16dp" android:text="Crear cuenta" />
+    </LinearLayout>
+</ScrollView>

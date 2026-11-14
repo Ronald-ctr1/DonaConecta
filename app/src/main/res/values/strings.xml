@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DonaConecta</string>
+    <string-array name="categorias">
+        <item>Ropa</item>
+        <item>Alimentos</item>
+        <item>Muebles</item>
+        <item>Libros</item>
+        <item>Tecnología</item>
+        <item>Otros</item>
+    </string-array>
+</resources>
